@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatha Yoga com Stella - Versão Minimalista</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #4a5568;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '🌸';
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 3rem;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '🌙';
+            position: absolute;
+            bottom: 15%;
+            right: 15%;
+            font-size: 2.5rem;
+            opacity: 0.3;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+            font-weight: 300;
+            letter-spacing: 2px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #718096;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1.5s ease-out 0.5s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #a78bfa 0%, #67e8f9 100%);
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
+            animation: fadeInUp 1.5s ease-out 1s both;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(167, 139, 250, 0.4);
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 4rem;
+            color: #2d3748;
+            font-weight: 300;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(135deg, #a78bfa, #67e8f9);
+        }
+
+        .yoga-practice {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .practice-item {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .practice-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .practice-item h3 {
+            color: #a78bfa;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .practice-item h3::before {
+            content: '🧘‍♀️';
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .media-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border-radius: 15px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-style: italic;
+            border: 2px dashed #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .media-placeholder:hover {
+            border-color: #a78bfa;
+            background: linear-gradient(135deg, #faf5ff, #e9f7ef);
+        }
+
+        .practice-item p {
+            color: #718096;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .pricing {
+            background: white;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 25px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #a78bfa, #67e8f9);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(167, 139, 250, 0.2);
+            border-color: #a78bfa;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            font-weight: 400;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #a78bfa;
+            margin: 2rem 0;
+            letter-spacing: 1px;
+        }
+
+        .features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .features li {
+            padding: 0.8rem 0;
+            position: relative;
+            padding-left: 2rem;
+            color: #718096;
+        }
+
+        .features li::before {
+            content: '🤍';
+            position: absolute;
+            left: 0;
+        }
+
+        .ebook-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 120px 0;
+        }
+
+        .ebook-section h2 {
+            color: #2d3748;
+        }
+
+        .ebook-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        .ebook-cover {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #ffffff, #f7fafc);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-style: italic;
+            border: 2px dashed #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .ebook-details {
+            text-align: left;
+        }
+
+        .ebook-details h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            font-weight: 300;
+        }
+
+        .ebook-details p {
+            color: #718096;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .chapters {
+            margin: 2rem 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .chapters h4 {
+            margin-bottom: 1.5rem;
+            color: #a78bfa;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            background: #2d3748;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .contact-item h4 {
+            color: #67e8f9;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .fitness-section {
+            background: white;
+            padding: 120px 0;
+        }
+
+        .fitness-section h2 {
+            color: #2d3748;
+        }
+
+        .fitness-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        .fitness-photo {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-style: italic;
+            border: 2px dashed #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .whatsapp-button {
+            background: linear-gradient(135deg, #25d366, #20bf55);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 15px;
+            transition: all 0.4s ease;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            .ebook-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .fitness-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Desperte Sua Essência Interior</h1>
+                <p>Uma jornada suave de autoconhecimento através do autêntico Hatha Yoga. Encontre o equilíbrio perfeito entre serenidade e vitalidade em cada respiração.</p>
+                <a href="#contato" class="cta-button">Inicie Sua Jornada</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yoga Practice Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Sua Prática Sagrada</h2>
+            <div class="yoga-practice">
+                <div class="practice-item">
+                    <h3>Alongamentos</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Iniciamos com movimentos suaves que despertam a consciência corporal, preparando cada músculo para a jornada de autodescoberta que está por vir.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Meditação</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Momentos de silêncio interior que aquietam a mente e conectam você com sua essência mais profunda, criando um espaço sagrado de paz.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Mantras</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Cantos sagrados que vibram através do seu ser, purificando pensamentos e elevando sua frequência energética para estados superiores de consciência.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Prāṇāyāma</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Técnicas milenares de respiração que expandem sua força vital (prāṇa), equilibrando o sistema nervoso e oxigenando cada célula do corpo.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Bandhas</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Contrações energéticas internas que fortalecem seu centro de poder, criando estabilidade física e mental enquanto conservam energia vital.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Kriyas</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Práticas purificadoras que limpam corpo e mente, removendo toxinas e bloqueios energéticos para uma sensação renovada de clareza e leveza.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Āsanas</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Posturas sagradas que esculpem força e flexibilidade, desenvolvendo presença e concentração através do alinhamento consciente do corpo.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Mudrās</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Gestos místicos das mãos que canalizam energias específicas, potencializando sua prática e conectando você com estados elevados de consciência.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3>Yoga Nidrā</h3>
+                    <div class="media-placeholder">Espaço para foto/vídeo</div>
+                    <p>Relaxamento profundo que encerra nossa prática, permitindo que toda a energia cultivada se integre suavemente em seu ser, restaurando completamente corpo e mente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing section">
+        <div class="container">
+            <h2>Investimento em Sua Jornada</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Experiência Inicial</h3>
+                    <div class="price">R$ 120</div>
+                    <ul class="features">
+                        <li>Primeira aula completa</li>
+                        <li>Avaliação personalizada</li>
+                        <li>Orientação individualizada</li>
+                        <li>Introdução ao método</li>
+                    </ul>
+                    <a href="#contato" class="cta-button">Agende Sua Experiência</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Prática Mensal</h3>
+                    <div class="price">R$ 600</div>
+                    <ul class="features">
+                        <li>12 aulas (3x por semana)</li>
+                        <li>Modalidade grupo ou individual</li>
+                        <li>Flexibilidade de local</li>
+                        <li>Acompanhamento contínuo</li>
+                        <li>Evolução gradual</li>
+                    </ul>
+                    <a href="#contato" class="cta-button">Comece Sua Transformação</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-book Section -->
+    <section class="ebook-section">
+        <div class="container">
+            <h2>Nutrição Consciente</h2>
+            <div class="ebook-content">
+                <div class="ebook-cover">
+                    Capa do E-book
+                </div>
+                <div class="ebook-details">
+                    <h3>Corpo Leve, Mente Livre</h3>
+                    <p>Um guia completo de receitas nutritivas que harmonizam perfeitamente com sua prática de yoga, nutrindo corpo e alma de forma equilibrada.</p>
+                    
+                    <div class="chapters">
+                        <h4>Conteúdo Completo</h4>
+                        <ul class="features">
+                            <li><strong>Cafés da Manhã Nutritivos:</strong> Panqueca de banana com aveia e receitas energizantes</li>
+                            <li><strong>Refeições Equilibradas:</strong> Frango ao curry com legumes e pratos que nutrem</li>
+                            <li><strong>Lanches Conscientes:</strong> Chips de batata-doce e opções saudáveis</li>
+                            <li><strong>Jejum Intermitente:</strong> Protocolo 16:8 com orientações seguras</li>
+                            <li><strong>Suplementação Natural:</strong> Guia completo para potencializar resultados</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#" class="cta-button">Adquirir E-book</a>
+                    <a href="https://wa.me/5521972969771" class="whatsapp-button">Tire Suas Dúvidas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Fitness Section -->
+    <section class="fitness-section">
+        <div class="container">
+            <h2>Treinamento Personalizado IFBB</h2>
+            <div class="fitness-content">
+                <div class="fitness-photo">
+                    Foto Personal Fitness
+                </div>
+                <div>
+                    <h3>Certificação IFBB - Excelência em Resultados</h3>
+                    <p>Complementando sua jornada no yoga, ofereço treinamento personalizado com metodologia científica comprovada para transformações corporais duradouras.</p>
+                    
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3>Sessão Individual</h3>
+                            <div class="price">R$ 120</div>
+                            <a href="#contato" class="cta-button">Agendar</a>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3>Programa Completo</h3>
+                            <div class="price">R$ 1.000</div>
+                            <ul class="features">
+                                <li>5 sessões semanais</li>
+                                <li>Avaliação por bioimpedância</li>
+                                <li>Planejamento nutricional</li>
+                                <li>Acompanhamento integral</li>
+                                <li>Resultados mensuráveis</li>
+                            </ul>
+                            <a href="#contato" class="cta-button">Transformar Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-info" id="contato">
+        <div class="container">
+            <h2>Conecte-se Conosco</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>Localização</h4>
+                    <p>Rua João Borges 240, casa 22<br>Gávea - CEP: 22.451-100<br>Rio de Janeiro/RJ</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>WhatsApp</h4>
+                    <p>(21) 97296-9771</p>
+                    <a href="https://wa.me/5521972969771" class="whatsapp-button">Conversar</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>E-mail</h4>
+                    <p>stella.cunha@gmail.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>Pagamento</h4>
+                    <p>PIX e Cartão de Crédito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
