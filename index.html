@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desperte Sua Melhor Versão - Hatha Yoga & Fitness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,10 +12,12 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.7;
-            color: #4a1d73;
-            background: linear-gradient(135deg, #fdf8ff 0%, #f5f0ff 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, 
+#f0f9f0 0%, 
+#e8f5e8 100%);
         }
 
         .container {
@@ -26,10 +27,12 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #6b46c1 0%, #9f7aea 100%);
+            background: linear-gradient(135deg, 
+#2d8f47 0%, 
+#52c668 100%);
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 80px 0;
             position: relative;
             overflow: hidden;
         }
@@ -41,7 +44,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+            background: rgba(0,0,0,0.2);
             z-index: 1;
         }
 
@@ -51,258 +54,200 @@
         }
 
         .hero h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 4.2em;
-            margin-bottom: 25px;
+            font-size: 3.5em;
+            margin-bottom: 20px;
             font-weight: 300;
             letter-spacing: 2px;
             animation: fadeInUp 1s ease-out;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.4em;
-            margin-bottom: 35px;
-            opacity: 0.95;
-            font-weight: 300;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            color: #4a1d73;
-            padding: 18px 45px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 15px 40px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
             animation: fadeInUp 1s ease-out 0.6s both;
-            font-family: 'Open Sans', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,215,0,0.4);
-            background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%);
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
-            margin: 50px 0;
-            border-radius: 25px;
-            box-shadow: 0 10px 40px rgba(107, 70, 193, 0.1);
-            border: 1px solid rgba(107, 70, 193, 0.05);
+            padding: 60px 0;
+            background: white;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         .section h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 3.2em;
+            font-size: 2.5em;
             text-align: center;
-            margin-bottom: 50px;
-            color: #6b46c1;
-            font-weight: 400;
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-            border-radius: 2px;
+            margin-bottom: 40px;
+            color: 
+#2d8f47;
+            font-weight: 300;
         }
 
         .yoga-practices {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .practice-card {
-            background: linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
-            padding: 35px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, 
+#f8fdf8 0%, 
+#e8f5e8 100%);
+            padding: 30px;
+            border-radius: 15px;
             text-align: center;
-            transition: all 0.4s ease;
-            border: 2px solid rgba(107, 70, 193, 0.1);
-            box-shadow: 0 8px 25px rgba(107, 70, 193, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .practice-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(45, 143, 71, 0.1);
         }
 
         .practice-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(107, 70, 193, 0.2);
-            border-color: rgba(255, 215, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(45, 143, 71, 0.2);
         }
 
         .practice-card h3 {
-            font-family: 'Merriweather', serif;
-            color: #6b46c1;
-            margin-bottom: 20px;
-            font-size: 1.4em;
-            font-weight: 700;
+            color: 
+#2d8f47;
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
 
         .practice-photo {
             width: 100%;
-            height: 220px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            overflow: hidden;
-            border: 3px solid rgba(107, 70, 193, 0.1);
+            height: 200px;
+            background: linear-gradient(135deg, 
+#52c668 0%, 
+#73d687 100%);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1em;
+            opacity: 0.8;
+            border: 2px solid rgba(255,255,255,0.2);
         }
 
         .ebook-section {
-            background: linear-gradient(135deg, #9f7aea 0%, #6b46c1 100%);
+            background: linear-gradient(135deg, 
+#52c668 0%, 
+#2d8f47 100%);
             color: white;
-            padding: 80px 0;
+            padding: 60px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .ebook-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            z-index: 1;
         }
 
         .ebook-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
 
         .ebook-cover {
             width: 100%;
-            max-width: 320px;
-            height: 420px;
+            max-width: 300px;
+            height: 400px;
             background: rgba(255,255,255,0.1);
-            border-radius: 20px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(15px);
-            border: 3px solid rgba(255,215,0,0.3);
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
         }
 
         .ebook-info h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.8em;
-            margin-bottom: 25px;
-            font-weight: 400;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-weight: 300;
         }
 
         .ebook-benefits {
             list-style: none;
             text-align: left;
-            margin: 25px 0;
+            margin: 20px 0;
         }
 
         .ebook-benefits li {
-            padding: 12px 0;
+            padding: 8px 0;
             position: relative;
-            padding-left: 35px;
-            font-size: 1.1em;
-            font-weight: 300;
+            padding-left: 25px;
         }
 
         .ebook-benefits li::before {
-            content: '⭐';
+            content: '🌿';
             position: absolute;
             left: 0;
-            color: #ffd700;
         }
 
         .price {
-            font-family: 'Merriweather', serif;
-            font-size: 3.2em;
-            font-weight: 700;
-            margin: 25px 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            margin: 20px 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            color: #ffd700;
         }
 
         .personal-section {
-            background: linear-gradient(135deg, #6b46c1 0%, #9f7aea 100%);
+            background: linear-gradient(135deg, 
+#2d8f47 0%, 
+#52c668 100%);
             color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .personal-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,0.05) 100%);
-            z-index: 1;
+            padding: 60px 0;
         }
 
         .personal-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
         .personal-photo {
             width: 100%;
-            height: 450px;
+            height: 400px;
             background: rgba(255,255,255,0.1);
-            border-radius: 20px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(15px);
-            border: 3px solid rgba(255,215,0,0.3);
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
         }
 
         .whatsapp-button {
-            background: #25D366;
+            background: 
+#25D366;
             color: white;
-            padding: 18px 35px;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
@@ -310,20 +255,298 @@
             margin: 10px;
             transition: all 0.3s ease;
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            bottom: 20px;
+            right: 20px;
             z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            font-family: 'Open Sans', sans-serif;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
 
         .whatsapp-button:hover {
-            background: #1da851;
-            transform: translateY(-3px);
+            background: 
+#1da851;
+            transform: translateY(-2px);
         }
 
         .payment-methods {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin: 25px 0
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .payment-method {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, 
+#f8fdf8 0%, 
+#e8f5e8 100%);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(45, 143, 71, 0.1);
+            border: 1px solid rgba(45, 143, 71, 0.1);
+        }
+
+        .contact-item h4 {
+            color: 
+#2d8f47;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .ebook-content,
+            .personal-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Desperte Sua Melhor Versão</h1>
+                <p>Encontre o equilíbrio perfeito entre corpo e mente através do Hatha Yoga e Personal Fitness</p>
+                <a href="#contato" class="cta-button">Comece Sua Jornada</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>O Caminho da Transformação</h2>
+            <p style="text-align: center; font-size: 1.2em; color: #666; margin-bottom: 40px;">
+                Descubra como o Hatha Yoga pode revolucionar sua vida através de práticas milenares adaptadas para o mundo moderno
+            </p>
+
+            <div class="yoga-practices">
+                <div class="practice-card">
+                    <div class="practice-photo">
+                         <img src="Imagens/asanas.jpg" alt="Mulher em postura de Āsana" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Āsana - Posturas</h3>
+                    <p>Desenvolva força, flexibilidade e consciência corporal através de posturas precisas que harmonizam seu corpo físico com sua energia vital.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                         <img src="Imagens/pranayama2.jpg" alt="Pessoa praticando Prāṇāyāma" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Prāṇāyāma - Respiração</h3>
+                    <p>Aprenda técnicas ancestrais de controle da respiração que acalmam a mente, reduzem o estresse e aumentam sua vitalidade.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                        <img src="Imagens/meditacao.jpg" alt="Pessoa em meditação Dhyāna" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Dhyāna - Meditação</h3>
+                    <p>Cultive a paz interior e a clareza mental através de práticas meditativas que transformam sua relação com os pensamentos.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                        <img src="Imagens/yoganidra2.jpg" alt="Relaxamento em Yoga Nidrā" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Yoga Nidrā - Relaxamento</h3>
+                    <p>Experimente estados profundos de relaxamento consciente que regeneram corpo e mente, proporcionando descanso verdadeiro.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                        <img src="Imagens/bandha.jpg" alt="Prática de Bandhas" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Bandhas - Fechos Energéticos</h3>
+                    <p>Domine os fechos energéticos que direcionam e concentram a energia vital, fortalecendo o core e expandindo a consciência.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                        <img src="Imagens/mudra.jpg" alt="Gesto de mão Mudrā" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Mudrās - Gestos Sagrados</h3>
+                    <p>Utilize gestos ancestrais das mãos que canalizam energia específica, equilibrando emoções e estados mentais.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                        <img src="Imagens/kriyas.jpg" alt="Técnica de purificação Kriya" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Kriyas - Purificação</h3>
+                    <p>Pratique técnicas de limpeza física e energética que desintoxicam o corpo e purificam os canais energéticos.</p>
+                </div>
+
+                <div class="practice-card">
+                    <div class="practice-photo">
+                        <img src="Imagens/om2.jpg" alt="Símbolo do mantra Om" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <h3>Mantras - Sons Sagrados</h3>
+                    <p>Desperte o poder transformador dos mantras através de vibrações sonoras que harmonizam mente, corpo e espírito.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ebook-section">
+        <div class="container">
+            <div class="ebook-content">
+                <div class="ebook-cover">
+                    <img src="Imagens/ebook.png" alt="Capa do E-book Corpo Leve, Mente Livre" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                </div>
+
+                <div class="ebook-info">
+                    <h3>Corpo Leve, Mente Livre</h3>
+                    <p style="font-size: 1.1em; margin-bottom: 20px;">E-book completo de receitas fitness para emagrecimento saudável</p>
+
+                    <ul class="ebook-benefits">
+                        <li>Receitas práticas para café da manhã, almoço e jantar</li>
+                        <li>Capítulo especial sobre jejum intermitente</li>
+                        <li>Guia completo de suplementação</li>
+                        <li>Lanches fit e snacks saudáveis</li>
+                        <li>Dicas de nutrição para resultados reais</li>
+                    </ul>
+
+                    <div class="price">R$ 49,90</div>
+
+                    <div class="payment-methods">
+                        <div class="payment-method">PIX</div>
+                        <div class="payment-method">Cartão</div>
+                    </div>
+
+                    <a href="https://wa.me/5521972969771?text=Olá! Tenho interesse no e-book Corpo Leve, Mente Livre" class="cta-button" style="margin-top: 20px;">Quero o E-book Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="personal-section">
+        <div class="container">
+            <div class="personal-content">
+                <div class="personal-photo">
+                    <img src="Imagens/aula.jpg" alt="Aluna em aula de Hatha Yoga" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                </div>
+
+                <div>
+                    <h2 style="color: white; margin-bottom: 20px;">Aulas de Hatha Yoga</h2>
+                    <p style="font-size: 1.2em; margin-bottom: 20px;">
+                        Transforme sua vida através da prática milenar do Hatha Yoga
+                    </p>
+
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; margin: 20px 0;">
+                        <h3 style="margin-bottom: 15px;">Modalidades Disponíveis</h3>
+                        <ul style="list-style: none; text-align: left;">
+                            <li>🧘‍♀️ Aulas em grupo ou individual</li>
+                            <li>🏠 Na casa do cliente ou no espaço</li>
+                            <li>🕉️ Lakshmi Yoga Shala</li>
+                            <li>📅 Pacote mensal: 12 aulas (3x por semana)</li>
+                        </ul>
+
+                        <div style="margin-top: 20px;">
+                            <div style="font-size: 1.1em; opacity: 0.8;">Aula experimental: R$ 120,00</div>
+                            <div style="font-size: 2.2em; font-weight: 600; margin-top: 10px;">Pacote mensal: R$ 600,00</div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5521972969771?text=Olá! Tenho interesse nas aulas de Hatha Yoga" class="cta-button" style="margin-top: 20px;">Quero Começar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="personal-section">
+        <div class="container">
+            <div class="personal-content">
+                <div class="personal-photo">
+                    <img src="Imagens/pessoal.jpg" alt="Stella Cunha, Personal Trainer" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                </div>
+
+                <div>
+                    <h2 style="color: white; margin-bottom: 20px;">Personal Fitness Certificada IFBB</h2>
+                    <p style="font-size: 1.2em; margin-bottom: 20px;">
+                        Transforme seu corpo e sua vida com acompanhamento profissional personalizado
+                    </p>
+
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; margin: 20px 0;">
+                        <h3 style="margin-bottom: 15px;">Plano Mensal Completo</h3>
+                        <ul style="list-style: none; text-align: left;">
+                            <li>💪 5 aulas semanais de Personal Fitness</li>
+                            <li>📊 Avaliação de bioimpedância</li>
+                            <li>🍎 Plano estratégico alimentar personalizado</li>
+                            <li>📱 Acompanhamento via WhatsApp</li>
+                        </ul>
+
+                        <div style="margin-top: 20px;">
+                            <div style="font-size: 1.1em; opacity: 0.8;">Aula avulsa: R$ 120,00</div>
+                            <div style="font-size: 2.2em; font-weight: 600; margin-top: 10px;">Plano Mensal: R$ 1.000,00</div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5521972969771?text=Olá! Tenho interesse no Personal Fitness" class="cta-button" style="margin-top: 20px;">Quero Começar Agora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-info" id="contato">
+        <div class="container">
+            <h2 style="color: 
+#2d8f47; margin-bottom: 30px;">Entre em Contato</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <h4>📍 Endereço</h4>
+                    <p>Rua João Borges 240, casa 22<br>Gávea - Rio de Janeiro/RJ<br>CEP: 22.451-100</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>📱 WhatsApp</h4>
+                    <p>(21) 97296-9771</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>✉️ E-mail</h4>
+                    <p>stella.cunha@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/5521972969771" class="whatsapp-button">💬 WhatsApp</a>
+</body>
+</html>
