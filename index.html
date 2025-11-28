@@ -12,10 +12,50 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
+            color: #2c3e50;
+            background: linear-gradient(135deg, #d5dfe8 0%, #c8d5e3 50%, #b8c9db 100%);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            z-index: -1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g transform="translate(100,100)" fill="none" stroke="%2334495e" stroke-width="0.5"><circle r="10"/><circle r="20"/><circle r="35"/><circle r="50"/><circle r="65"/><circle r="80"/><path d="M0,-80 Q5,-75 0,-70 Q-5,-75 0,-80 M0,-80 L0,-50"/><path d="M56.57,-56.57 Q61.57,-51.57 56.57,-46.57 Q51.57,-51.57 56.57,-56.57 M56.57,-56.57 L35.36,-35.36"/><path d="M80,0 Q75,5 70,0 Q75,-5 80,0 M80,0 L50,0"/><path d="M56.57,56.57 Q51.57,61.57 46.57,56.57 Q51.57,51.57 56.57,56.57 M56.57,56.57 L35.36,35.36"/><path d="M0,80 Q-5,75 0,70 Q5,75 0,80 M0,80 L0,50"/><path d="M-56.57,56.57 Q-61.57,51.57 -56.57,46.57 Q-51.57,51.57 -56.57,56.57 M-56.57,56.57 L-35.36,35.36"/><path d="M-80,0 Q-75,-5 -70,0 Q-75,5 -80,0 M-80,0 L-50,0"/><path d="M-56.57,-56.57 Q-51.57,-61.57 -46.57,-56.57 Q-51.57,-51.57 -56.57,-56.57 M-56.57,-56.57 L-35.36,-35.36"/><ellipse rx="15" ry="8" transform="rotate(0)"/><ellipse rx="15" ry="8" transform="rotate(45)"/><ellipse rx="15" ry="8" transform="rotate(90)"/><ellipse rx="15" ry="8" transform="rotate(135)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(0)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(45)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(90)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(135)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(180)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(225)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(270)"/><path d="M0,-30 C8,-30 15,-35 15,-40 C15,-35 20,-30 25,-30 C20,-30 15,-25 15,-20 C15,-25 8,-30 0,-30" transform="rotate(315)"/></g></svg>');
+            background-size: 500px 500px;
+            background-position: center center;
+            animation: mandalaRotate 120s linear infinite;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            opacity: 0.03;
+            z-index: -1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g transform="translate(100,100)" fill="none" stroke="%238b5a9f" stroke-width="0.6"><circle r="15"/><circle r="30"/><circle r="45"/><circle r="60"/><circle r="75"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(0)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(45)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(90)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(135)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(180)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(225)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(270)"/><path d="M0,-75 L0,-60 M0,-75 Q10,-70 0,-65 Q-10,-70 0,-75" transform="rotate(315)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(0)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(45)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(90)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(135)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(180)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(225)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(270)"/><path d="M-8,-50 Q0,-55 8,-50 Q0,-45 -8,-50" transform="rotate(315)"/></g></svg>');
+            background-size: 400px 400px;
+            border-radius: 50%;
+            animation: mandalaRotate 90s linear infinite reverse;
+        }
+
+        @keyframes mandalaRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .container {
@@ -25,8 +65,8 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #2d8f47 0%, #52c668 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(180, 200, 220, 0.95) 0%, rgba(160, 185, 210, 0.9) 50%, rgba(140, 170, 200, 0.9) 100%);
+            color: #2c3e50;
             text-align: center;
             padding: 80px 0;
             position: relative;
@@ -40,8 +80,26 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.2);
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(139, 90, 159, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(100, 120, 150, 0.15) 0%, transparent 40%);
             z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 700px;
+            opacity: 0.06;
+            z-index: 1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><g transform="translate(150,150)" fill="none" stroke="%238b5a9f" stroke-width="0.8"><circle r="20"/><circle r="40"/><circle r="60"/><circle r="80"/><circle r="100"/><circle r="120"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(0)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(30)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(60)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(90)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(120)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(150)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(180)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(210)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(240)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(270)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(300)"/><path d="M0,-120 Q15,-115 20,-100 Q5,-105 0,-120 M0,-120 L0,-80" transform="rotate(330)"/><ellipse rx="25" ry="12" transform="rotate(0)"/><ellipse rx="25" ry="12" transform="rotate(30)"/><ellipse rx="25" ry="12" transform="rotate(60)"/><ellipse rx="25" ry="12" transform="rotate(90)"/><ellipse rx="25" ry="12" transform="rotate(120)"/><ellipse rx="25" ry="12" transform="rotate(150)"/><path d="M-12,-70 Q0,-80 12,-70 L8,-62 Q0,-68 -8,-62 Z" transform="rotate(0)"/><path d="M-12,-70 Q0,-80 12,-70 L8,-62 Q0,-68 -8,-62 Z" transform="rotate(60)"/><path d="M-12,-70 Q0,-80 12,-70 L8,-62 Q0,-68 -8,-62 Z" transform="rotate(120)"/><path d="M-12,-70 Q0,-80 12,-70 L8,-62 Q0,-68 -8,-62 Z" transform="rotate(180)"/><path d="M-12,-70 Q0,-80 12,-70 L8,-62 Q0,-68 -8,-62 Z" transform="rotate(240)"/><path d="M-12,-70 Q0,-80 12,-70 L8,-62 Q0,-68 -8,-62 Z" transform="rotate(300)"/><circle r="3" cx="0" cy="-45"/><circle r="3" cx="39" cy="-22.5"/><circle r="3" cx="39" cy="22.5"/><circle r="3" cx="0" cy="45"/><circle r="3" cx="-39" cy="22.5"/><circle r="3" cx="-39" cy="-22.5"/></g></svg>');
+            background-size: 100%;
+            border-radius: 50%;
+            animation: mandalaRotate 150s linear infinite;
         }
 
         .hero-content {
@@ -53,20 +111,22 @@
             font-size: 3.5em;
             margin-bottom: 20px;
             font-weight: 300;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             animation: fadeInUp 1s ease-out;
+            color: #1a1a1a;
         }
 
         .hero p {
             font-size: 1.3em;
             margin-bottom: 30px;
-            opacity: 0.9;
+            opacity: 0.85;
             animation: fadeInUp 1s ease-out 0.3s both;
+            color: #34495e;
         }
 
         .cta-button {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
+            background: rgba(139, 90, 159, 0.7);
             color: white;
             padding: 15px 40px;
             text-decoration: none;
@@ -74,29 +134,29 @@
             font-weight: 600;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(139, 90, 159, 0.4);
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .cta-button:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(116, 73, 138, 0.8);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(139, 90, 159, 0.3);
         }
 
         .section {
             padding: 60px 0;
-            background: white;
+            background: rgba(245, 250, 255, 0.9);
             margin: 40px 0;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(100, 120, 150, 0.15);
         }
 
         .section h2 {
             font-size: 2.5em;
             text-align: center;
             margin-bottom: 40px;
-            color: #2d8f47;
+            color: #34495e;
             font-weight: 300;
         }
 
@@ -108,21 +168,21 @@
         }
 
         .practice-card {
-            background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e8 100%);
+            background: linear-gradient(135deg, rgba(230, 240, 250, 0.8) 0%, rgba(220, 235, 245, 0.9) 100%);
             padding: 30px;
             border-radius: 15px;
             text-align: center;
             transition: transform 0.3s ease;
-            border: 1px solid rgba(45, 143, 71, 0.1);
+            border: 1px solid rgba(140, 170, 200, 0.2);
         }
 
         .practice-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(45, 143, 71, 0.2);
+            box-shadow: 0 15px 40px rgba(140, 170, 200, 0.3);
         }
 
         .practice-card h3 {
-            color: #2d8f47;
+            color: #34495e;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
@@ -130,25 +190,51 @@
         .practice-photo {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #52c668 0%, #73d687 100%);
+            background: linear-gradient(135deg, rgba(180, 200, 220, 0.6) 0%, rgba(200, 215, 230, 0.7) 100%);
             border-radius: 10px;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #2c3e50;
             font-size: 1.1em;
             opacity: 0.8;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(139, 90, 159, 0.3);
         }
 
         .ebook-section {
-            background: linear-gradient(135deg, #52c668 0%, #2d8f47 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(160, 185, 210, 0.95) 0%, rgba(140, 170, 200, 0.9) 100%);
+            color: #2c3e50;
             padding: 60px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        .ebook-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(139, 90, 159, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .ebook-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 450px;
+            height: 450px;
+            opacity: 0.05;
+            z-index: 1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><g transform="translate(125,125)" fill="none" stroke="%238b5a9f" stroke-width="0.7"><circle r="18"/><circle r="35"/><circle r="52"/><circle r="70"/><circle r="88"/><circle r="105"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(0)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(45)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(90)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(135)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(180)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(225)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(270)"/><path d="M0,-105 C10,-100 15,-90 10,-80 L0,-88 C-10,-90 -15,-100 -10,-105 Z" transform="rotate(315)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(0)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(45)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(90)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(135)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(180)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(225)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(270)"/><path d="M-5,-60 Q0,-65 5,-60 Q8,-55 5,-50 Q0,-52 -5,-50 Q-8,-55 -5,-60" transform="rotate(315)"/><ellipse rx="20" ry="10" transform="rotate(22.5)"/><ellipse rx="20" ry="10" transform="rotate(67.5)"/><ellipse rx="20" ry="10" transform="rotate(112.5)"/><ellipse rx="20" ry="10" transform="rotate(157.5)"/></g></svg>');
+            background-size: 100%;
+            border-radius: 50%;
+            animation: mandalaRotate 110s linear infinite reverse;
         }
 
         .ebook-content {
@@ -158,25 +244,28 @@
             align-items: center;
             max-width: 1000px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .ebook-cover {
             width: 100%;
             max-width: 300px;
             height: 400px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(245, 250, 255, 0.2);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(139, 90, 159, 0.3);
         }
 
         .ebook-info h3 {
             font-size: 2.2em;
             margin-bottom: 20px;
             font-weight: 300;
+            color: #1a1a1a;
         }
 
         .ebook-benefits {
@@ -189,25 +278,57 @@
             padding: 8px 0;
             position: relative;
             padding-left: 25px;
+            color: #34495e;
         }
 
         .ebook-benefits li::before {
             content: '✔';
             position: absolute;
             left: 0;
+            color: rgba(139, 90, 159, 0.9);
         }
 
         .price {
             font-size: 2.5em;
             font-weight: 600;
             margin: 20px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(139, 90, 159, 0.3);
+            color: #1a1a1a;
         }
 
         .personal-section {
-            background: linear-gradient(135deg, #2d8f47 0%, #52c668 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(140, 170, 200, 0.9) 0%, rgba(160, 185, 210, 0.95) 100%);
+            color: #2c3e50;
             padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .personal-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 30%, rgba(139, 90, 159, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .personal-section::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -80px;
+            transform: translateY(-50%);
+            width: 380px;
+            height: 380px;
+            opacity: 0.05;
+            z-index: 1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220"><g transform="translate(110,110)" fill="none" stroke="%2334495e" stroke-width="0.6"><circle r="15"/><circle r="30"/><circle r="45"/><circle r="62"/><circle r="80"/><circle r="95"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(0)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(36)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(72)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(108)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(144)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(180)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(216)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(252)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(288)"/><path d="M0,-95 L5,-85 Q0,-90 -5,-85 L0,-95" transform="rotate(324)"/><path d="M-8,-55 C-3,-60 3,-60 8,-55 C3,-50 -3,-50 -8,-55" transform="rotate(0)"/><path d="M-8,-55 C-3,-60 3,-60 8,-55 C3,-50 -3,-50 -8,-55" transform="rotate(72)"/><path d="M-8,-55 C-3,-60 3,-60 8,-55 C3,-50 -3,-50 -8,-55" transform="rotate(144)"/><path d="M-8,-55 C-3,-60 3,-60 8,-55 C3,-50 -3,-50 -8,-55" transform="rotate(216)"/><path d="M-8,-55 C-3,-60 3,-60 8,-55 C3,-50 -3,-50 -8,-55" transform="rotate(288)"/><circle r="2" cx="0" cy="-40"/><circle r="2" cx="38" cy="-12"/><circle r="2" cx="24" cy="32"/><circle r="2" cx="-24" cy="32"/><circle r="2" cx="-38" cy="-12"/></g></svg>');
+            background-size: 100%;
+            border-radius: 50%;
+            animation: mandalaRotate 95s linear infinite;
         }
 
         .personal-content {
@@ -215,18 +336,29 @@
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .personal-photo {
             width: 100%;
             height: 400px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(245, 250, 255, 0.2);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(139, 90, 159, 0.3);
+        }
+
+        .personal-section h2 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .personal-section h3 {
+            color: #2c3e50;
         }
 
         .whatsapp-button {
@@ -259,14 +391,21 @@
         }
 
         .payment-method {
-            background: rgba(255,255,255,0.1);
+            background: rgba(245, 250, 255, 0.2);
             padding: 10px 20px;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 90, 159, 0.3);
+        }
+
+        .payment-method a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
         }
 
         .contact-info {
-            background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e8 100%);
+            background: linear-gradient(135deg, rgba(230, 240, 250, 0.9) 0%, rgba(220, 235, 245, 0.95) 100%);
             padding: 40px 0;
             text-align: center;
         }
@@ -279,16 +418,26 @@
         }
 
         .contact-item {
-            background: white;
+            background: rgba(245, 250, 255, 0.7);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(45, 143, 71, 0.1);
-            border: 1px solid rgba(45, 143, 71, 0.1);
+            box-shadow: 0 3px 10px rgba(140, 170, 200, 0.2);
+            border: 1px solid rgba(140, 170, 200, 0.2);
         }
 
         .contact-item h4 {
-            color: #2d8f47;
+            color: #34495e;
             margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: rgba(139, 90, 159, 0.9);
         }
 
         @keyframes fadeInUp {
@@ -333,14 +482,14 @@
     <div class="container">
         <div class="section">
             <h2>O Caminho da Transformação</h2>
-            <p style="text-align: center; font-size: 1.2em; color: #666; margin-bottom: 40px;">
+            <p style="text-align: center; font-size: 1.2em; color: #34495e; margin-bottom: 40px;">
                 Descubra como o Hatha Yoga pode revolucionar sua vida através de práticas milenares adaptadas para o mundo moderno
             </p>
 
             <div class="yoga-practices">
                 <div class="practice-card">
                     <div class="practice-photo">
-                         <img src="Imagens/asanas.jpg" alt="Mulher em postura de Āsana" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Āsana
                     </div>
                     <h3>Āsana - Posturas</h3>
                     <p>Desenvolva força, flexibilidade e consciência corporal através de posturas precisas que harmonizam seu corpo físico com sua energia vital.</p>
@@ -348,7 +497,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                         <img src="Imagens/pranayama2.jpg" alt="Pessoa praticando Prāṇāyāma" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Prāṇāyāma
                     </div>
                     <h3>Prāṇāyāma - Respiração</h3>
                     <p>Aprenda técnicas ancestrais de controle da respiração que acalmam a mente, reduzem o estresse e aumentam sua vitalidade.</p>
@@ -356,7 +505,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                        <img src="Imagens/meditacao.jpg" alt="Pessoa em meditação Dhyāna" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Dhyāna
                     </div>
                     <h3>Dhyāna - Meditação</h3>
                     <p>Cultive a paz interior e a clareza mental através de práticas meditativas que transformam sua relação com os pensamentos.</p>
@@ -364,7 +513,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                        <img src="Imagens/yoganidra2.jpg" alt="Relaxamento em Yoga Nidrā" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Yoga Nidrā
                     </div>
                     <h3>Yoga Nidrā - Relaxamento</h3>
                     <p>Experimente estados profundos de relaxamento consciente que regeneram corpo e mente, proporcionando descanso verdadeiro.</p>
@@ -372,7 +521,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                        <img src="Imagens/bandha.jpg" alt="Prática de Bandhas" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Bandhas
                     </div>
                     <h3>Bandhas - Fechos Energéticos</h3>
                     <p>Domine os fechos energéticos que direcionam e concentram a energia vital, fortalecendo o core e expandindo a consciência.</p>
@@ -380,7 +529,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                        <img src="Imagens/mudra.jpg" alt="Gesto de mão Mudrā" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Mudrās
                     </div>
                     <h3>Mudrās - Gestos Sagrados</h3>
                     <p>Utilize gestos ancestrais das mãos que canalizam energia específica, equilibrando emoções e estados mentais.</p>
@@ -388,7 +537,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                        <img src="Imagens/kriyas.jpg" alt="Técnica de purificação Kriya" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Kriyas
                     </div>
                     <h3>Kriyas - Purificação</h3>
                     <p>Pratique técnicas de limpeza física e energética que desintoxicam o corpo e purificam os canais energéticos.</p>
@@ -396,7 +545,7 @@
 
                 <div class="practice-card">
                     <div class="practice-photo">
-                        <img src="Imagens/om2.jpg" alt="Símbolo do mantra Om" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                        Om
                     </div>
                     <h3>Mantras - Sons Sagrados</h3>
                     <p>Desperte o poder transformador dos mantras através de vibrações sonoras que harmonizam mente, corpo e espírito.</p>
@@ -409,7 +558,7 @@
         <div class="container">
             <div class="ebook-content">
                 <div class="ebook-cover">
-                    <img src="Imagens/ebook.png" alt="Capa do E-book Corpo Leve, Mente Livre" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                    E-book Cover
                 </div>
 
                 <div class="ebook-info">
@@ -441,16 +590,16 @@
         <div class="container">
             <div class="personal-content">
                 <div class="personal-photo">
-                    <img src="Imagens/aula.jpg" alt="Aluna em aula de Hatha Yoga" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                    Aula de Yoga
                 </div>
 
                 <div>
-                    <h2 style="color: white; margin-bottom: 20px;">Aulas de Hatha Yoga</h2>
+                    <h2>Aulas de Hatha Yoga</h2>
                     <p style="font-size: 1.2em; margin-bottom: 20px;">
                         Transforme sua vida através da prática milenar do Hatha Yoga
                     </p>
 
-                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <div style="background: rgba(245, 250, 255, 0.2); padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid rgba(139, 90, 159, 0.3);">
                         <h3 style="margin-bottom: 15px;">Modalidades Disponíveis</h3>
                         <ul style="list-style: none; text-align: left;">
                             <li>✔ Aulas em grupo ou individual</li>
@@ -475,16 +624,16 @@
         <div class="container">
             <div class="personal-content">
                 <div class="personal-photo">
-                    <img src="Imagens/pessoal.jpg" alt="Stella Cunha, Personal Trainer" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+                    Personal Fitness
                 </div>
 
                 <div>
-                    <h2 style="color: white; margin-bottom: 20px;">Personal Fitness Certificada IFBB</h2>
+                    <h2>Personal Fitness Certificada IFBB</h2>
                     <p style="font-size: 1.2em; margin-bottom: 20px;">
                         Transforme seu corpo e sua vida com acompanhamento profissional personalizado
                     </p>
 
-                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <div style="background: rgba(245, 250, 255, 0.2); padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid rgba(255, 182, 193, 0.3);">
                         <h3 style="margin-bottom: 15px;">Plano Mensal Completo</h3>
                         <ul style="list-style: none; text-align: left;">
                             <li>✔ 5 aulas semanais de Personal Fitness</li>
@@ -507,29 +656,29 @@
 
     <div class="contact-info" id="contato">
         <div class="container">
-            <h2 style="color: #2d8f47; margin-bottom: 30px;">Entre em Contato</h2>
+            <h2 style="color: #34495e; margin-bottom: 30px;">Entre em Contato</h2>
             <div class="contact-details">
                 <div class="contact-item">
-                    <h4> Endereço</h4>
+                    <h4>📍 Endereço</h4>
                     <p>Rua João Borges 240 <br>Gávea - Rio de Janeiro/RJ<br>CEP: 22.451-100</p>
                 </div>
 
                 <div class="contact-item">
-                    <h4> WhatsApp</h4>
+                    <h4>📱 WhatsApp</h4>
                     <p>(92) 99488-7423</p>
                 </div>
 
                <div class="contact-item">
-    <h4>Instagram</h4>
-    <p>
-        <a href="https://www.instagram.com/stellacunha_/" target="_blank" rel="noopener noreferrer">
-            @stellacunha_
-        </a>
-    </p>
-</div>
+                    <h4>📷 Instagram</h4>
+                    <p>
+                        <a href="https://www.instagram.com/stellacunha_/" target="_blank" rel="noopener noreferrer">
+                            @stellacunha_
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <a href="https://wa.me/5592994887423" class="whatsapp-button"> WhatsApp</a>
+    <a href="https://wa.me/5592994887423" class="whatsapp-button">💬 WhatsApp</a>
 </body>
 </html>
