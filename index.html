@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stella Studio — Yoga, Consciência Corporal e Fitness</title>
+    <meta name="description" content="Métodos que unem yoga, consciência corporal e fitness para melhorar saúde, autoestima e qualidade de vida.">
+    <meta name="keywords" content="yoga em parintins, yoga parintins, personal trainer parintins, emagrecimento rápido, jejum intermitente, yoga laboral empresas, ginastica laboral empresas, yoga para empresas, qualidade de vida, bem-estar, stella studio, personal gávea, personal zona sul, yoga no rio de janeiro, yoga perto de mim, personal fitness rio de janeiro, meditação">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* ===== VARIABLES ===== */
+        :root {
+            --black:   #0d0d0d;
+            --dark:    #141414;
+            --dark2:   #1a1a1a;
+            --gold:    #C9A460;
+            --gold2:   #e8c97a;
+            --gold3:   #a07830;
+            --cream:   #f5efe6;
+            --text:    #d4c4a8;
+            --muted:   #8a7a62;
+            --white:   #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--cream);
+        }
+
+        p {
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(201, 164, 96, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(201, 164, 96, 0.8), 0 0 30px rgba(201, 164, 96, 0.6); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Header & Logo */
+        header {
+            padding: 15px 0;
+            text-align: center;
+            background: var(--dark);
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(201, 164, 96, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 10px rgba(201, 164, 96, 0.5));
+        }
+
+        @media (max-width: 768px) {
+            .logo-img {
+                max-width: 90px;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.85)), url('asanas.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--gold2);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--cream);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--gold);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold2);
+            border-color: var(--gold2);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(201, 164, 96, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .btn {
+                padding: 12px 30px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Efeito Brilho/Luz nos links */
+        .glow-link {
+            position: relative;
+            color: var(--gold);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            word-break: break-word;
+        }
+
+        .glow-link:hover {
+            color: var(--gold2);
+            animation: glow 1.5s ease-in-out infinite;
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(201, 164, 96, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 50px 0;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--gold2);
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Grid de Yoga */
+        .yoga-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .yoga-card {
+            background: linear-gradient(135deg, var(--dark2) 0%, var(--dark) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(201, 164, 96, 0.2);
+        }
+
+        .yoga-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(201, 164, 96, 0.2);
+            border-color: var(--gold);
+        }
+
+        .yoga-card i {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .yoga-card:hover i {
+            color: var(--gold2);
+            transform: scale(1.2);
+        }
+
+        .yoga-card h3 {
+            margin-bottom: 15px;
+            color: var(--gold2);
+        }
+
+        @media (max-width: 768px) {
+            .yoga-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .yoga-card {
+                padding: 20px;
+            }
+
+            .yoga-card i {
+                font-size: 2rem;
+            }
+        }
+
+        /* Módulo Corporativo */
+        .corporate {
+            background-color: var(--dark);
+        }
+
+        .corporate-item {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .corporate-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .corporate-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(201, 164, 96, 0.15);
+            border: 2px solid var(--gold);
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .corporate-img img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .corporate-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .placeholder-img {
+            background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            color: var(--gold);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .corporate-content h3 {
+            color: var(--gold2);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .corporate-item, .corporate-item:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .corporate-content {
+                text-align: center;
+            }
+
+            .corporate-img {
+                min-height: 250px;
+            }
+        }
+
+        /* E-book Section */
+        .ebook-section {
+            background: linear-gradient(135deg, var(--dark2) 0%, var(--dark) 100%);
+            border-radius: 30px;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            border: 2px solid var(--gold);
+            box-shadow: 0 20px 50px rgba(201, 164, 96, 0.1);
+        }
+
+        .ebook-img {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .ebook-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--gold);
+            transition: var(--transition);
+        }
+
+        .ebook-img:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(201, 164, 96, 0.2);
+        }
+
+        .ebook-content h2 {
+            color: var(--gold2);
+        }
+
+        @media (max-width: 768px) {
+            .ebook-section {
+                flex-direction: column;
+                padding: 30px;
+                gap: 30px;
+            }
+
+            .ebook-img {
+                max-width: 100%;
+            }
+
+            .ebook-content {
+                text-align: center;
+            }
+        }
+
+        /* Afiliados */
+        .affiliates {
+            background: linear-gradient(135deg, var(--dark2) 0%, var(--dark) 100%);
+            color: var(--cream);
+            text-align: center;
+            padding: 60px 0;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .affiliates h2 {
+            color: var(--gold2);
+        }
+
+        .affiliates p {
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .affiliates {
+                padding: 40px 0;
+            }
+        }
+
+        /* Sobre Mim */
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 400px;
+            aspect-ratio: 1/1;
+            border: 3px solid var(--gold);
+            box-shadow: 0 15px 40px rgba(201, 164, 96, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            color: var(--gold2);
+            margin-bottom: 10px;
+        }
+
+        .about-content h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .about-img {
+                max-width: 100%;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--text);
+            padding: 50px 0;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+
+        footer h2 {
+            color: var(--gold2);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            font-size: 1.1rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            word-break: break-word;
+            max-width: 100%;
+        }
+
+        .social-links a:hover {
+            color: var(--gold2);
+            transform: scale(1.1);
+            text-shadow: 0 0 15px rgba(201, 164, 96, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 40px 0;
+            }
+
+            footer h2 {
+                font-size: 1.5rem;
+            }
+
+            .social-links a {
+                font-size: 1rem;
+            }
+        }
+
+        /* Botão WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            background-color: #1ead59;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://www.contate.me/5592994887423" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Espaço para Logomarca -->
+                <img src="logo.png" alt="Stella Studio Logo" class="logo-img">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate">Métodos que unem yoga, consciência corporal e fitness</h1>
+            <p class="animate">Para melhorar saúde, autoestima e qualidade de vida. Encontre o equilíbrio perfeito entre corpo e mente através do Hatha Yoga e Personal Fitness.</p>
+            <a href="https://www.contate.me/5592994887423" class="btn animate" target="_blank">Comece Sua Jornada</a>
+        </div>
+    </section>
+
+    <section id="transformacao">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Caminho da Transformação</h2>
+                <p>Descubra como o Hatha Yoga pode revolucionar sua vida através de práticas milenares adaptadas para o mundo moderno.</p>
+            </div>
+
+            <div class="yoga-grid">
+                <!-- Āsana -->
+                <div class="yoga-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Āsana — Posturas</h3>
+                    <p>Desenvolva força, flexibilidade e consciência corporal através de posturas precisas que harmonizam seu corpo físico com sua energia vital.</p>
+                </div>
+
+                <!-- Prāṇāyāma -->
+                <div class="yoga-card">
+                    <i class="fas fa-wind"></i>
+                    <h3>Prāṇāyāma — Respiração</h3>
+                    <p>Aprenda técnicas ancestrais de controle da respiração que acalmam a mente, reduzem o estresse e aumentam sua vitalidade.</p>
+                </div>
+
+                <!-- Dhyāna -->
+                <div class="yoga-card">
+                    <i class="fas fa-om"></i>
+                    <h3>Dhyāna — Meditação</h3>
+                    <p>Cultive a paz interior e a clareza mental através de práticas meditativas que transformam sua relação com os pensamentos.</p>
+                </div>
+
+                <!-- Yoga Nidrā -->
+                <div class="yoga-card">
+                    <i class="fas fa-moon"></i>
+                    <h3>Yoga Nidrā — Relaxamento</h3>
+                    <p>Experimente estados profundos de relaxamento consciente que regeneram corpo e mente, proporcionando descanso verdadeiro.</p>
+                </div>
+
+                <!-- Bandhas -->
+                <div class="yoga-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Bandhas — Fechos Energéticos</h3>
+                    <p>Domine os fechos energéticos que direcionam e concentram a energia vital, fortalecendo o core e expandindo a consciência.</p>
+                </div>
+
+                <!-- Mudrās -->
+                <div class="yoga-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Mudrās — Gestos Sagrados</h3>
+                    <p>Utilize gestos ancestrais das mãos que canalizam energia específica, equilibrando emoções e estados mentais.</p>
+                </div>
+
+                <!-- Kriyas -->
+                <div class="yoga-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Kriyas — Purificação</h3>
+                    <p>Pratique técnicas de limpeza física e energética que desintoxicam o corpo e purificam os canais energéticos.</p>
+                </div>
+
+                <!-- Mantras -->
+                <div class="yoga-card">
+                    <i class="fas fa-volume-up"></i>
+                    <h3>Mantras — Sons Sagrados</h3>
+                    <p>Desperte o poder transformador dos mantras através de vibrações sonoras que harmonizam mente, corpo e espírito.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <h3 style="color: var(--gold2);">Aulas de Hatha Yoga</h3>
+                <p>Transforme sua vida através da prática milenar do Hatha Yoga</p>
+                <br>
+                <a href="https://www.contate.me/5592994887423" class="btn" target="_blank">Quero Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="corporate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Para sua Empresa</h2>
+                <p>Saúde para o colaborador, resultados para a empresa.</p>
+            </div>
+
+            <div class="corporate-item">
+                <div class="corporate-img">
+                    <img src="ginastica-laboral.jpeg" alt="Ginástica Laboral">
+                </div>
+                <div class="corporate-content">
+                    <h3>GINÁSTICA LABORAL</h3>
+                    <p>Reduz dores, previne lesões, aumenta a produtividade, e cria um ambiente de trabalho mais saudável.</p>
+                    <br>
+                    <a href="https://www.contate.me/5592994887423" class="glow-link" target="_blank">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="corporate-item">
+                <div class="corporate-img">
+                    <img src="yoga-laboral.jpg" alt="Yoga Laboral">
+                </div>
+                <div class="corporate-content">
+                    <h3>YOGA LABORAL</h3>
+                    <p>Mais foco, menos estresse e mais bem estar no dia a dia do trabalho. Melhora a postura, aumenta a energia e promove o equilíbrio entre corpo e mente.</p>
+                    <br>
+                    <a href="https://www.contate.me/5592994887423" class="glow-link" target="_blank">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ebook">
+        <div class="container">
+            <div class="ebook-section">
+                <div class="ebook-img">
+                    <img src="ebook.jpeg" alt="E-book Corpo Leve Mente Livre">
+                </div>
+                <div class="ebook-content">
+                    <h2>Corpo Leve, Mente Livre</h2>
+                    <p>Um guia prático com estratégias nutricionais, hábitos saudáveis, e mais de 50 receitas testadas pra você emagrecer com leveza e constância.</p>
+                    <br>
+                    <a href="https://stella-cunha.hotmart.host/corpo-leve-mente-livre-o-segredo-para-o-emagracimento-duradouro-f3144a25-140b-4167-8462-263ffb9f1004" class="btn" target="_blank">Quero o E-book Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="affiliates">
+        <div class="container">
+            <h2>Seja um Afiliado</h2>
+            <p>Ganhe comissão indicando o ebook Stella Studio. Uma forma inteligente de gerar renda extra online promovendo um produto de alto valor.</p>
+            <br>
+            <a href="https://app-vlc.hotmart.com/affiliate-recruiting/view/1997C100944150" class="btn" target="_blank">QUERO ME AFILIAR</a>
+        </div>
+    </section>
+
+    <section id="personal">
+        <div class="container" style="text-align: center;">
+            <div class="section-title">
+                <h2>Personal Fitness</h2>
+                <p>Transforme seu corpo e sua vida com acompanhamento profissional personalizado.</p>
+            </div>
+            <div class="corporate-img" style="max-width: 600px; margin: 0 auto 30px;">
+                <img src="personal.jpg" alt="Personal Fitness">
+            </div>
+            <a href="https://www.contate.me/5592994887423" class="btn" target="_blank">Quero Começar Agora</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container">
+        <div class="about">
+            <div class="about-img">
+                <img src="stella.jpg" alt="Stella Cunha - Professora de Yoga">
+            </div>
+            <div class="about-content">
+                <h2>Sobre Mim</h2>
+                <h3>Professora de Hatha Yoga e Personal Fitness</h3>
+                <p>Minha missão é ajudar você a se reconectar com seu corpo, sua mente e sua essência através do movimento, da consciência e da disciplina.</p>
+                <p>Como professora de Hatha Yoga e Personal Fitness, desenvolvo métodos que unem força, flexibilidade e mentalidade para resultados que vão muito além da estética, transformam sua vida!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Sua jornada de transformação começa aqui!</h2>
+            <div class="social-links">
+                <a href="https://instagram.com/stellacunha_" class="glow-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> @stellacunha_</a>
+                <a href="https://www.contate.me/5592994887423" class="glow-link" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i> (92) 99488-7423</a>
+            </div>
+            <p>&copy; 2026 Stella Studio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de revelação suave ao rolar
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.yoga-card, .corporate-item, .ebook-section');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Inicialização básica para animação
+        document.querySelectorAll('.yoga-card, .corporate-item, .ebook-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s ease-out';
+        });
+    </script>
+</body>
+</html>
