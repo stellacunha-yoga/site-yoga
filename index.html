@@ -258,17 +258,16 @@
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       transform: scaleX(0); transition: transform 0.4s;
     }
-    .pilar:hover { background: rgba(201,164,96,0.05); }
     .pilar:hover::before { transform: scaleX(1); }
     .pilar-img {
       width: 100%; aspect-ratio: 3/2; object-fit: cover;
       margin-bottom: 1.5rem;
-      filter: brightness(1) saturate(1);
+      filter: brightness(0.85) saturate(1);
       transition: box-shadow 0.4s;
       box-shadow: 0 0 0 0 rgba(201,164,96,0);
     }
     .pilar:hover .pilar-img {
-      filter: brightness(1) saturate(1);
+      filter: brightness(1.1) saturate(1);
       box-shadow: 0 0 18px 3px rgba(201,164,96,0.45);
     }
     .pilar-num {
