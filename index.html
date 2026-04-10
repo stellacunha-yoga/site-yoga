@@ -5,65 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stella Studio | Wellness · Fitness · Yoga</title>
 
-  <meta name="description" content="Stella Studio — Hatha Yoga, Personal Fitness, Ginástica Laboral e Yoga Laboral. Métodos que unem yoga, consciência corporal e fitness para saúde, autoestima e qualidade de vida." />
-  <meta name="keywords" content="yoga em parintins, yoga parintins, personal trainer parintins, emagrecimento rápido, jejum intermitente, yoga laboral empresas, ginastica laboral empresas, yoga para empresas, qualidade de vida, bem-estar, stella studio, personal gávea, personal zona sul, yoga no rio de janeiro, yoga perto de mim, personal fitness rio de janeiro, meditação" />
-  <meta name="author" content="Stella Cunha" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ===== VARIABLES ===== */
     :root {
-      --black:   #0d0d0d;
-      --dark:    #141414;
-      --dark2:   #1a1a1a;
-      --gold:    #C9A460;
-      --gold2:   #e8c97a;
-      --gold3:   #a07830;
-      --cream:   #f5efe6;
-      --text:    #d4c4a8;
-      --muted:   #8a7a62;
-      --white:   #ffffff;
+      --black: #0d0d0d;
+      --dark: #141414;
+      --gold: #C9A460;
+      --white: #ffffff;
+      --text: #d4c4a8;
+      --muted: #8a7a62;
     }
-
-    /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--black);
-      color: var(--text);
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-
-    /* ===== TYPOGRAPHY ===== */
-    h1, h2, h3, h4 { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; }
-    .serif-italic { font-family: 'Cormorant Garamond', serif; font-style: italic; }
-
-    .gold-text {
-      background: linear-gradient(135deg, var(--gold3) 0%, var(--gold) 40%, var(--gold2) 60%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .divider {
-      width: 80px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 1.5rem auto;
-    }
-    .divider-left { margin: 1.5rem 0; }
-
-    section { padding: 100px 0; position: relative; }
+    body { background: var(--black); color: var(--text); font-family: 'Raleway', sans-serif; overflow-x: hidden; }
+    section { padding: 100px 0; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    
+    /* NAV */
+    nav { position: fixed; top: 0; width: 100%; height: 52px; background: #1a1a1a; display: flex; align-items: center; justify-content: space-between; padding: 0 1.8rem; z-index: 999; border-bottom: 1px solid rgba(201,164,96,0.1); }
+    .nav-logo { font-family: 'Cinzel', serif; color: var(--gold); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; }
+    
+    /* HERO */
+    #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 52px; }
+    .hero-logo { max-width: 600px; width: 90%; margin-bottom: 2rem; filter: drop-shadow(0 0 20px rgba(201,164,96,0.2)); }
+    .btn-gold { background: var(--gold); color: var(--black); padding: 1rem 2rem; font-family: 'Cinzel', serif; text-transform: uppercase; text-decoration: none; font-size: 0.7rem; letter-spacing: 0.1em; transition: 0.3s; }
+    .btn-gold:hover { opacity: 0.9; transform: translateY(-2px); }
 
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height
+    /* PILARES REFORMULADOS */
+    .pilares-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(201,164,96,0.1); margin-top: 3rem; }
+    .pilar { background: var(--dark); padding: 2rem; position: relative; transition: 0.4s; overflow: hidden; }
+    .pilar::before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transition: 0.4s; }
+    .pilar:hover::before { transform: scaleX(1); }
+    .pilar-img { width: 100%; aspect-ratio: 3/2; object-fit: cover; margin-bottom: 1.5rem; transition: 0.4s; filter: brightness(0.8); }
+    .pilar:hover .pilar-img { filter: brightness(1.1); box-shadow: 0 0 15px rgba(201,164,96,0.3); }
+    .pilar-title { font-family: 'Cinzel', serif; font-size: 0.6rem; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+    .pilar-subtitle { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 1rem; }
+    .pilar p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* RESPONSIVO */
+    @media (max-width: 1024px) { .pilares-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .pilares-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">Stella Studio</div>
+    <a href="https://www.contate.me/5592994887423" target="_blank" class="btn-gold" style="padding: 0.5rem 1rem;">Agendar</a>
+  </nav>
+
+  <section id="hero">
+    <div class="container">
+      <img src="Imagens/logo-stella-studio.jpeg" alt="Stella Studio" class="hero-logo" />
+      <br><br>
+      <a href="#caminho" class="btn-gold">Conhecer o Método</a>
+    </div>
+  </section>
+
+  <section id="caminho">
+    <div class="container">
+      <h2 style="font-family: 'Cinzel'; text-align: center; color: var(--white); font-size: 2rem;">O Caminho da Transformação</h2>
+      <div class="pilares-grid">
+        <div class="pilar">
+          <img src="Imagens/asanas.jpeg" class="pilar-img">
+          <span class="pilar-title">Āsana</span>
+          <h3 class="pilar-subtitle">Posturas</h3>
+          <p>Desenvolva força e flexibilidade através de posturas precisas.</p>
+        </div>
+        <div class="pilar">
+          <img src="Imagens/pranayama2.jpg" class="pilar-img">
+          <span class="pilar-title">Prāṇāyāma</span>
+          <h3 class="pilar-subtitle">Respiração</h3>
+          <p>Controle da respiração para acalmar a mente e reduzir o estresse.</p>
+        </div>
+        <div class="pilar">
+          <img src="Imagens/meditacao.jpeg" class="pilar-img">
+          <span class="pilar-title">Dhyāna</span>
+          <h3 class="pilar-subtitle">Meditação</h3>
+          <p>Cultive paz interior e clareza mental absoluta.</p>
+        </div>
+        <div class="pilar">
+          <img src="Imagens/yoganidra.jpg" class="pilar-img">
+          <span class="pilar-title">Yoga Nidrā</span>
+          <h3 class="pilar-subtitle">Relaxamento</h3>
+          <p>Estados profundos de relaxamento consciente para regeneração.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
