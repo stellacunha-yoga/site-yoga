@@ -258,7 +258,6 @@
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       transform: scaleX(0); transition: transform 0.4s;
     }
-    .pilar:hover { background: rgba(201,164,96,0.05); }
     .pilar:hover::before { transform: scaleX(1); }
     .pilar-img {
       width: 100%; aspect-ratio: 3/2; object-fit: cover;
@@ -268,21 +267,21 @@
       box-shadow: 0 0 0 0 rgba(201,164,96,0);
     }
     .pilar:hover .pilar-img {
-      filter: brightness(1) saturate(1);
+      filter: brightness(1.1) saturate(1);
       box-shadow: 0 0 18px 3px rgba(201,164,96,0.45);
     }
-    .pilar-num {
-      font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-style: italic;
-      color: rgba(201,164,96,0.15); position: absolute; top: 1rem; right: 1.5rem;
-      line-height: 1;
-    }
     .pilar-title {
-      font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.12em;
-      color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem;
+      font-family: 'Cinzel', serif; 
+  font-size: 1.2rem; /* Tamanho da Ginástica Laboral */
+  color: var(--white); /* Branco */
+  text-transform: uppercase; 
+  margin-bottom: 0.5rem;
     }
     .pilar-subtitle {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic;
-      color: var(--white); margin-bottom: 0.8rem;
+      font-family: 'Cinzel', serif; 
+  font-size: 1.2rem; /* Tamanho da Ginástica Laboral */
+  color: var(--white); /* Branco */
+  margin-bottom: 0.8rem;
     }
     .pilar p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
