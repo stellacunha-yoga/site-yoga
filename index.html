@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stella Studio | Wellness · Fitness · Yoga</title>
+
+  <meta name="description" content="Stella Studio — Hatha Yoga, Personal Fitness, Ginástica Laboral e Yoga Laboral. Métodos que unem yoga, consciência corporal e fitness para saúde, autoestima e qualidade de vida." />
+  <meta name="keywords" content="yoga em parintins, yoga parintins, personal trainer parintins, emagrecimento rápido, jejum intermitente, yoga laboral empresas, ginastica laboral empresas, yoga para empresas, qualidade de vida, bem-estar, stella studio, personal gávea, personal zona sul, yoga no rio de janeiro, yoga perto de mim, personal fitness rio de janeiro, meditação" />
+  <meta name="author" content="Stella Cunha" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --black:   #0d0d0d;
+      --dark:    #141414;
+      --dark2:   #1a1a1a;
+      --gold:    #C9A460;
+      --gold2:   #e8c97a;
+      --gold3:   #a07830;
+      --cream:   #f5efe6;
+      --text:    #d4c4a8;
+      --muted:   #8a7a62;
+      --white:   #ffffff;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.08em; }
+    .serif-italic { font-family: 'Cormorant Garamond', serif; font-style: italic; }
+
+    .gold-text {
+      background: linear-gradient(135deg, var(--gold3) 0%, var(--gold) 40%, var(--gold2) 60%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .divider {
+      width: 80px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1.5rem auto;
+    }
+    .divider-left { margin: 1.5rem 0; }
+
+    section { padding: 100px 0; position: relative; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      height: 52px;
+      padding: 0 1.8rem;
+      background: #1a1a1a;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(201,164,96,0.08);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.3em;
+      color: rgba(201,164,96,0.7);
+      text-transform: uppercase;
+    }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.18em;
+      color: var(--text); transition: color 0.3s;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.15em;
+      border: 1px solid var(--gold); color: var(--gold);
+      padding: 0.55rem 1.4rem; border-radius: 1px;
+      transition: all 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--black); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 25px; height: 1px; background: var(--gold); transition: all 0.3s; }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh; display: flex; align-items: flex-start;
+      position: relative; overflow: hidden;
+      background: #1a1a1a;
+      padding-top: 52px;
+    }
+    #hero::after {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(201,164,96,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 20%, rgba(201,164,96,0.3) 0%, transparent 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      width: 100%;
+      text-align: center;
+      animation: fadeUp 1.2s ease both;
+    }
+    .hero-logo {
+      width: 100%;
+      max-width: 680px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 40px rgba(201,164,96,0.2));
+    }
+    .hero-below-logo { padding: 1.5rem 2rem 4rem; }
+    .hero-text { font-size: 1rem; color: var(--text); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8; }
+    .hero-btns { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+    .btn-gold {
+      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--gold3), var(--gold), var(--gold2));
+      color: var(--black);
+      padding: 1rem 2.2rem;
+      border: none; cursor: pointer;
+      position: relative; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,164,96,0.35); }
+    .btn-outline {
+      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,164,96,0.5); color: var(--gold);
+      padding: 1rem 2.2rem;
+      transition: all 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(201,164,96,0.08); }
+
+    /* ===== PILARES (AJUSTADOS) ===== */
+    #caminho { background: var(--dark); }
+    .section-header { text-align: center; margin-bottom: 5rem; }
+    .section-eyebrow { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; }
+
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(201,164,96,0.12);
+    }
+    .pilar {
+      background: var(--dark);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: background 0.4s;
+    }
+    .pilar::before {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0); transition: transform 0.4s;
+    }
+    .pilar:hover::before { transform: scaleX(1); }
+
+    .pilar-img {
+      width: 100%; aspect-ratio: 3/2; object-fit: cover;
+      margin-bottom: 1.5rem;
+      filter: brightness(0.9);
+      transition: all 0.4s;
+      box-shadow: 0 0 0 0 rgba(201,164,96,0);
+    }
+    /* Efeito de luz apenas em volta da foto e na base */
+    .pilar:hover .pilar-img {
+      filter: brightness(1.1);
+      box-shadow: 0 0 18px 3px rgba(201,164,96,0.45);
+    }
+
+    .pilar-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-style: italic;
+      color: rgba(201,164,96,0.15); position: absolute; top: 1rem; right: 1.5rem;
+      line-height: 1;
+    }
+    .pilar-title {
+      font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.12em;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem;
+      display: block;
+    }
+    /* Subtítulo em branco e tamanho padronizado com Ginástica Laboral */
+    .pilar-subtitle {
+      font-family: 'Cinzel', serif; 
+      font-size: 1.2rem; 
+      color: var(--white); 
+      margin-bottom: 0.8rem;
+    }
+    .pilar p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    /* ===== SEÇÕES GERAIS ===== */
+    #hatha { background: #0d0d0d; }
+    .hatha-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .hatha-img-wrap img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+    .hatha-badge { background: var(--gold); color: var(--black); font-family: 'Cinzel', serif; font-size: 0.65rem; padding: 1rem 1.5rem; text-transform: uppercase; }
+
+    #empresas { background: var(--dark2); }
+    .empresas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 4rem; }
+    .empresa-card { position: relative; overflow: hidden; border: 1px solid rgba(201,164,96,0.15); }
+    .empresa-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: all 0.5s; }
+    .empresa-card:hover img { transform: scale(1.03); box-shadow: 0 0 22px 4px rgba(201,164,96,0.4); }
+    .empresa-info { padding: 2.5rem; background: linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,0.98) 100%); position: absolute; bottom: 0; left: 0; right: 0; }
+    .empresa-name { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.5rem; }
+
+    #ebook { background: #0d0d0d; }
+    .ebook-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .ebook-img img { width: 80%; margin: 0 auto; filter: drop-shadow(0 30px 60px rgba(201,164,96,0.2)); }
+
+    #personal { background: var(--dark); }
+    .personal-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+
+    #sobre { background: var(--dark2); }
+    .sobre-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .sobre-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+
+    #contato { background: #0d0d0d; text-align: center; }
+    .contato-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem; }
+    .contato-link { border: 1px solid rgba(201,164,96,0.2); padding: 1rem 2rem; transition: all 0.4s; font-family: 'Cinzel', serif; font-size: 0.75rem; color: var(--text); }
+    .contato-link:hover { border-color: var(--gold); color: var(--gold); }
+
+    footer { background: var(--black); padding: 2.5rem; text-align: center; border-top: 1px solid rgba(201,164,96,0.1); }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1024px) { .pilares-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .pilares-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hatha-inner, .empresas-grid, .ebook-inner, .sobre-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Stella Studio</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#caminho">Yoga</a></li>
+      <li><a href="#hatha">Aulas</a></li>
+      <li><a href="#empresas">Empresas</a></li>
+      <li><a href="#ebook">E-book</a></li>
+      <li><a href="#personal">Personal</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://www.contate.me/5592994887423" target="_blank" class="nav-cta">Agendar</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-content">
+      <img src="Imagens/logo-stella-studio.jpeg" alt="Stella Studio" class="hero-logo" />
+      <div class="hero-below-logo">
+        <p class="hero-text">Métodos que unem yoga, consciência corporal e fitness para melhorar saúde, autoestima e qualidade de vida.</p>
+        <div class="hero-btns">
+          <a href="https://www.contate.me/5592994887423" target="_blank" class="btn-gold">Comece Sua Jornada</a>
+          <a href="#caminho" class="btn-outline">Conheça o método</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="caminho">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">O Caminho</p>
+        <h2 class="section-title gold-text">O Caminho da Transformação</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="pilares-grid">
+        <div class="pilar reveal">
+          <span class="pilar-num">01</span>
+          <img src="Imagens/asanas.jpeg" alt="Āsana" class="pilar-img" />
+          <span class="pilar-title">Āsana</span>
+          <h3 class="pilar-subtitle">Posturas</h3>
+          <p>Desenvolva força, flexibilidade e consciência corporal através de posturas precisas.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">02</span>
+          <img src="Imagens/pranayama2.jpg" alt="Prāṇāyāma" class="pilar-img" />
+          <span class="pilar-title">Prāṇāyāma</span>
+          <h3 class="pilar-subtitle">Respiração</h3>
+          <p>Técnicas ancestrais de controle da respiração que acalmam a mente.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">03</span>
+          <img src="Imagens/meditacao.jpeg" alt="Dhyāna" class="pilar-img" />
+          <span class="pilar-title">Dhyāna</span>
+          <h3 class="pilar-subtitle">Meditação</h3>
+          <p>Cultive a paz interior e clareza mental através de práticas meditativas.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">04</span>
+          <img src="Imagens/yoganidra.jpg" alt="Yoga Nidrā" class="pilar-img" />
+          <span class="pilar-title">Yoga Nidrā</span>
+          <h3 class="pilar-subtitle">Relaxamento</h3>
+          <p>Estados profundos de relaxamento consciente que regeneram corpo e mente.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">05</span>
+          <img src="Imagens/bandhas.jpeg" alt="Bandhas" class="pilar-img" />
+          <span class="pilar-title">Bandhas</span>
+          <h3 class="pilar-subtitle">Fechos Energéticos</h3>
+          <p>Domine os fechos energéticos que direcionam e concentram a energia vital.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">06</span>
+          <img src="Imagens/mudra.jpg" alt="Mudrās" class="pilar-img" />
+          <span class="pilar-title">Mudrās</span>
+          <h3 class="pilar-subtitle">Gestos Sagrados</h3>
+          <p>Gestos ancestrais das mãos que canalizam energia específica.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">07</span>
+          <img src="Imagens/kriyas.jpg" alt="Kriyas" class="pilar-img" />
+          <span class="pilar-title">Kriyas</span>
+          <h3 class="pilar-subtitle">Purificação</h3>
+          <p>Técnicas de limpeza física e energética que desintoxicam o corpo.</p>
+        </div>
+        <div class="pilar reveal">
+          <span class="pilar-num">08</span>
+          <img src="Imagens/mantras.jpeg" alt="Mantras" class="pilar-img" />
+          <span class="pilar-title">Mantras</span>
+          <h3 class="pilar-subtitle">Sons Sagrados</h3>
+          <p>O poder transformador das vibrações sonoras que harmonizam o espírito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="empresas">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Bem-Estar Corporativo</p>
+        <h2 class="section-title gold-text">Para Sua Empresa</h2>
+      </div>
+      <div class="empresas-grid">
+        <div class="empresa-card reveal">
+          <img src="Imagens/ginastica-laboral.jpeg" alt="Ginástica Laboral" />
+          <div class="empresa-info">
+            <h3 class="empresa-name">Ginástica Laboral</h3>
+            <p>Reduz dores e previne lesões no ambiente de trabalho.</p>
+          </div>
+        </div>
+        <div class="empresa-card reveal">
+          <img src="Imagens/yoga-laboral.jpeg" alt="Yoga Laboral" />
+          <div class="empresa-info">
+            <h3 class="empresa-name">Yoga Laboral</h3>
+            <p>Mais foco e menos estresse para sua equipe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-inner">
+        <div class="sobre-img reveal">
+          <img src="Imagens/sobre-mim.JPG" alt="Stella Cunha" />
+        </div>
+        <div class="sobre-text reveal">
+          <p class="section-eyebrow">Quem sou eu</p>
+          <h2 class="gold-text">Stella Cunha</h2>
+          <p>Minha missão é ajudar você a se reconectar com seu corpo através do movimento e da consciência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2 class="section-title gold-text">Sua jornada começa aqui</h2>
+      <div class="contato-links reveal">
+        <a href="https://www.contate.me/5592994887423" target="_blank" class="contato-link">WhatsApp · (92) 99488-7423</a>
+        <a href="https://instagram.com/stellacunha_" target="_blank" class="contato-link">Instagram @stellacunha_</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="footer-copy">© 2025 Stella Studio · Wellness · Fitness · Yoga</p>
+  </footer>
+
+  <a href="https://www.contate.me/5592994887423" target="_blank" class="whatsapp-float">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
